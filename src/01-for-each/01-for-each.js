@@ -7,11 +7,11 @@ Then, write a function named speaker that takes in a string and a callback funct
 ------------------------------------------------------------------------------------------------ */
 
 export const greeting = (word) => {
-    // Solution code here...
+    return word.toUpperCase();
 };
 
-export const speaker = (message, callback) => {
-    // Solution code here...
+export const speaker = (message, greeting) => {
+    return greeting(message);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -27,11 +27,14 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 export const addValues = (arr, value) => {
-    // Solution code here...
+    arr.push(value);
 };
 
-export const addNumbers = (num, arr, times, callback) => {
-    // Solution code here...
+export const addNumbers = (num, arr, times, addValues) => {
+    for (let index = 0; index < times; index++) {
+        addValues(arr, num)
+
+    }
 };
 
 /* ------------------------------------------------------------------------------------------------
